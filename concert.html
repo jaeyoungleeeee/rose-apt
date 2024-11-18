@@ -1,0 +1,680 @@
+<!DOCTYPE html>  
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+
+    
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 200vh;
+            background-color: white;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* 수평 스크롤 방지 */
+            height: 50;
+            
+    }
+
+        #pink, #pink2 {
+        display: none;
+    }
+    #tjs {
+            position: absolute;
+            top: -68px;
+            left: 51.25%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: auto;
+        }
+        /* 이미지 위치 설정 */
+        #bruno {
+            position: absolute;
+            top: 290px;
+            left: 51.25%;
+            transform: translateX(-50%);
+            width: 873px;
+            height: auto;
+        }
+        #brunoy, #handy, #aparty, #basey, #liney, #pink, #pink2, #cheer,#man1,#man2,#man3,#ligthy,#jansang,#stock,#people3{
+            display: none;
+        }
+        #brunoy {
+            position: absolute;
+            top: 290px;
+            left: 51.30%;
+            transform: translateX(-50%);
+            width: 873px;
+            height: auto;
+            z-index:9999;
+        }
+        #stock {
+            position: absolute;
+            top: 920px;
+            left: 72.25%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: auto;
+            z-index:9999;
+        }
+        #music { position: absolute;
+            top: 94%;
+            left: -10%;
+            transform: translateY(-50%);
+            width: 1800px;
+            height: auto;
+            opacity: 10%;
+        }
+        #graphic {
+            position: absolute;
+            top: 8%;
+            left: 4%;
+            transform: translateY(-50%);
+            width: 340px;
+            height: auto;
+            z-index: 9999;
+        }
+        #clickme {
+            position: absolute;
+            top: 50px;
+            left: 0%;
+            transform: translateX(-50%);
+            width: 2000px;
+            height: auto;
+            z-index: 7015;
+        }
+        #bar {
+            position: absolute;
+            top: 1.2%;
+            left: -14%;
+            transform: translateY(-50%);
+            width: 1920px;
+            height: auto;
+            z-index: 7015;
+        }
+      
+        #line {
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1500px;
+            height: auto;
+        }
+        #liney {
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1500px;
+            height: auto;
+            z-index:0;
+        }
+        #jansang {
+            position: absolute;
+            top: 18%;
+            left: 5.65%;
+            transform: translate(-50%, -50%);
+            width: 1500px;
+            height: auto;
+            z-index:-1;
+            transition: transform 5s ease;
+            transform-origin: bottom center; 
+        }
+        #hand {
+            position: absolute;
+            top: 43%;
+            left: 53%;
+            transform: translateY(-50%);
+            width: 950px;
+            height: auto;
+        }
+        #handy {
+            position: absolute;
+            top: 43%;
+            left: 53%;
+            transform: translateY(-50%);
+            width: 950px;
+            height: auto;
+            z-index: 9999;
+        }
+        #ligth {
+            position: absolute;
+            bottom: 1780px;
+            left:50%;
+            transform: translateX(-50%);
+            width: 1350px;
+            height: auto;
+            z-index: 9999;
+        }
+        #ligthy {
+            position: absolute;
+            bottom: 1780px;
+            left:50%;
+            transform: translateX(-50%);
+            width: 1350px;
+            height: auto;
+            z-index: 9999;
+        }
+        #apart {
+            position: absolute;
+            bottom: 455px;
+            left: 85.5%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: auto;
+        }
+        #aparty {
+            position: absolute;
+            bottom: 455px;
+            left: 85.5%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: auto;
+        }
+        #title {
+            position: absolute;
+            bottom: 1550px;
+            left: 11%;
+            transform: translateX(-50%);
+            width: 230px;
+            height: auto;
+            cursor: pointer;
+            z-index: 9999;
+        }
+        #base {
+            position: absolute;
+            bottom: 460px;
+            left: 9.5%;
+            transform: translateX(-50%);
+            width: 220px;
+            height: auto;
+        }
+        #basey {
+            position: absolute;
+            bottom: 460px;
+            left: 9.5%;
+            transform: translateX(-50%);
+            width: 220px;
+            height: auto;
+            z-index: 9998;
+        }
+        #pink {
+            position: absolute;
+            top: 50%;
+            left: 41%;
+            transform: translate(-50%, -50%);
+            width: 1100px;
+            height: auto;
+            z-index: 9998;
+            display: none; /* 초기에는 숨김 처리 */
+        }
+        #pink2 {
+            position: absolute;
+            top: 45%;
+            left: 34%;
+            transform: translate(-50%, -50%);
+            width: 1200px;
+            height: auto;
+            display: none; /* 초기에는 숨김 처리 */
+            z-index: 9998;
+        }
+        #apt {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: auto;
+        }
+        .apttypo {
+            position: absolute;
+            width: 140px;
+            height: auto;
+        }
+        /* click.png 스타일 */
+        #click {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: auto;
+            z-index: 9999;
+            cursor: pointer;
+        }
+        #people {
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1685px;
+            height: auto;
+            z-index: 9999;
+            cursor: pointer;
+            display: none; /* 초기에는 숨김 처리 */
+        }
+
+        /* play.png 스타일 */
+        #play {
+            position: absolute;
+            bottom: 1500px;
+            right: 1385px;
+            width: 230px;
+            height: auto;
+            cursor: pointer;
+            z-index: 9999;
+        }
+       #man1  {
+            top: 105.5%;
+            position: absolute;
+            left: 0%;
+            transform: translateX(0%);
+            display: block;
+            display: none;
+            z-index: 9999;
+        }
+        #man2 {
+            top: 97.6%;
+            position: absolute;
+            left: 40%;
+            transform: translateX(-15%);
+            display: block;
+            display: none;
+            z-index: 9999;
+        }
+        #man3 {
+            top: 105.5%;
+            position: absolute;
+            left: 60%;
+            transform: translateX(15%);
+            display: block;
+            display: none;
+            z-index: 9999;
+        }
+        #beam {
+    position: absolute;
+    top: 38%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    width: 2500px; /* 빔 크기 조정 */
+    height: 2500px; /* 빔 크기 조정 */
+    display: none; /* 초기에는 숨김 처리 */
+    z-index: 7009; /* 다른 요소들보다 앞에 표시되도록 설정 */
+    opacity: 0.35;
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.1;  /* 불투명도를 20%로 줄임 */
+    }
+    50% {
+        opacity: 0.1;  /* 불투명도를 20%로 줄임 */
+    }
+    100% {
+        opacity: 1;  /* 불투명도를 다시 100%로 */
+    }
+}
+
+#ligthy {
+    animation: fadeInOut 6s infinite; /* 애니메이션을 2초 주기로 반복 */
+}
+/* 빠른 리듬 효과 */
+@keyframes scaleEffect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* 커짐 */
+    }
+}
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .blink {
+            animation: blink 0.5s ease 3;
+        }
+        /* 폭죽 효과 스타일 */
+        .firework {
+            position: absolute;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background-color: #ff0;
+            animation: explosion 1s ease-out forwards;
+        }
+        @keyframes explosion {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(5);
+                opacity: 0;
+            }
+        }.wave-effect {
+  width: 100px; /* 원하는 크기로 조절 */
+  height: 100px; /* 원하는 크기로 조절 */
+  display: block;
+  margin: 0 auto;
+  animation: wave 2s infinite ease-in-out; /* 애니메이션 적용 */
+}
+@keyframes bounce {
+            0% {
+                transform: scale(1); /* 원래 크기 */
+                opacity: 1; /* 불투명도 1 */
+                filter: blur(0); /* 흐려지지 않음 */
+            }
+            100% {
+                transform: scale(1.5); /* 1.5배 커짐 */
+                opacity: 0.1; /* 불투명도 0.1로 감소 */
+                filter: blur(5px); /* 흐려짐 */
+            }
+        }
+#jansang {
+    display: none; /* 처음에 jansang.png는 보이지 않음 */
+}
+
+#jansang.scaling {
+    animation: scaleEffect 2s infinite; /* 애니메이션을 무한 반복 */
+}
+.bounce {
+  animation: bounce 3s ease-in-out infinite;
+}
+        /* 색상 배경 설정 */
+        #colorBackground {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 138%;
+            background-color: #F74C92;
+            z-index: -1;
+            display: none;
+        }
+        /* 컨페티 스타일 */
+        .confetti {
+            position: absolute;
+            width: 18px;
+            height: 10px;
+            border-radius: 70%;
+            opacity: 0.8;
+            animation: confettiFall 2.3s ease-out forwards;
+        }
+        @keyframes confettiFall {
+            0% { transform: translateY(0) rotate(0); }
+            100% { transform: translateY(200px) rotate(360deg); opacity: 0; }
+        }
+        @keyframes scaleUpDown {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+.jansang:hover {
+            transform: scale(1.5, 1.5); /* 위/옆으로 커지게 */
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 100px auto;
+            animation: bounce 4s infinite; /* 4초 주기로 반복 */
+            transform-origin: bottom center; /* 아래를 기준으로 커지게 설정 */ 
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="colorBackground"></div> <!-- 색상 배경 추가 -->
+    <img src="line.png" alt="Line" id="line">
+    <img src="tjs.png" alt="Tjs" id="tjs">
+    <img src="graphic.png" alt="Graphic" id="graphic">
+    <img src="bruno.png" alt="Bruno" id="bruno">
+    <img src="brunoy.png" alt="Brunoy" id="brunoy">
+    <img src="line.png" alt="Line" id="line">
+    <img src="liney.png" alt="Liney" id="liney">
+    <img src="hand.png" alt="Hand" id="hand">
+    <img src="handy.png" alt="Handy" id="handy">
+    <img src="apart.png" alt="Apart" id="apart">
+    <img src="aparty.png" alt="Aparty" id="aparty">
+    <img src="title.png" alt="Title" id="title">
+    <img src="base.png" alt="Base" id="base">
+    <img src="basey.png" alt="Basey" id="basey">
+    <img src="pink.png" alt="Pink" id="pink">
+    <img src="pink2.png" alt="Pink2" id="pink2">
+    <img src="click.png" alt="Click" id="click">
+    <img src="bar.png" alt="Bar" id="bar">
+    <video id="apt" src="apt.mp4" autoplay muted loop></video>
+    <img src="play.png" alt="Play" id="play">
+    <img src="people.png" alt="People" id="people">
+    <audio id="aptAudio" src="apt.mp3"></audio>
+    <img src="man1.png" alt="Man1" id="man1">
+    <img src="man2.png" alt="Man2" id="man2">
+    <img src="man3.png" alt="Man3" id="man3">
+    <img src="beam.png" alt="Beam" id="beam">
+    <img src="ligth.png" alt="Ligth" id="ligth">
+    <img src="ligthy.png" alt="Ligthy" id="ligthy">
+    <img src="music.png" id="music" class="bounce" />
+    <img id="jansang" src="jansang.png" class="bounce">
+    <img src="stock.png" alt="Stock" id="stock">
+    <div class="jansang"></div>
+    <script>
+
+        
+document.getElementById("title").addEventListener("click", function() {
+    const images = [
+    document.getElementById("brunoy"),
+    document.getElementById("liney"),
+    document.getElementById("handy"),
+    document.getElementById("aparty"),
+    document.getElementById("basey"),
+    document.getElementById("pink"),
+    document.getElementById("beam"),
+    document.getElementById("people"),
+    document.getElementById("man1"),
+    document.getElementById("man2"),
+    document.getElementById("man3"),
+    document.getElementById("jansang"),
+    document.getElementById("ligthy"),
+    document.getElementById("stock"),
+    document.getElementById("people3"),
+    ];
+    
+
+    document.getElementById("music").style.display = "block"; // 음악 이미지 보이기
+    const colorBackground = document.getElementById("colorBackground");
+    colorBackground.style.display = "block";
+            
+        // 빔 이미지가 표시되도록 설정
+        document.getElementById("beam").style.display = "block";
+  // 나머지 코드 실행 (기존 코드 유지)
+  setTimeout(() => {
+        images.forEach(img => img.classList.remove("blink"));
+    }, 1500);
+
+    document.getElementById("pink").style.display = "block";
+    startPinkAnimation();
+
+            images.forEach(img => {
+                img.classList.add("blink");
+                img.style.display = "block";
+            });
+
+            setTimeout(() => {
+                images.forEach(img => img.classList.remove("blink"));
+            }, 1500);
+
+            document.getElementById("pink").style.display = "block";
+            startPinkAnimation();
+            
+            const peopleImage = document.getElementById("people");
+    const peopleyImage = document.getElementById("peopley");
+    peopleImage.style.display = "block"; // "People.png" 나타내기
+    peopleyImage.style.display = "block"; // "Peopley.png" 나타내기
+        });
+
+        let isPink2Visible = false;
+let intervalId;
+        function startPinkAnimation() {
+            if (intervalId) {
+        clearInterval(intervalId);
+    }
+    intervalId = setInterval(function() {
+        const pink = document.getElementById("pink");
+        const pink2 = document.getElementById("pink2");
+
+        if (isPink2Visible) {
+            pink.style.display = "none";
+            pink2.style.display = "block";
+        } else {
+            pink.style.display = "block";
+            pink2.style.display = "none";
+        }
+        isPink2Visible = !isPink2Visible;
+        const newTypo = document.createElement("img");
+        newTypo.src = "apttypo.png";
+        newTypo.classList.add("apttypo");
+        newTypo.style.top = `${Math.random() * window.innerHeight}px`;
+        newTypo.style.left = `${Math.random() * window.innerWidth}px`;
+        document.getElementById("liney").appendChild(newTypo);
+    }, 1500);  // 1.5초마다 전환
+}
+document.getElementById("title").addEventListener("click", function() {
+    const ligthyImage = document.getElementById("ligthy");
+
+    document.getElementById("title").addEventListener("click", function() {
+    const jansangImage = document.getElementById("jansang");
+    
+    // jansang.png 이미지 보이게 만들기
+    jansangImage.style.display = 'block';
+    
+    // 자동으로 커지고 작아지게 애니메이션 적용
+    jansangImage.classList.add('scaling');
+    
+    // 2초 후에 애니메이션을 멈추도록 설정
+    setTimeout(() => {
+        jansangImage.classList.remove('scaling'); // 애니메이션 종료
+        jansangImage.style.display = 'none'; // 다시 숨기기 (원하는 경우)
+    }, 1800); // 2초 후 애니메이션을 멈추고 숨김
+});
+
+    // 애니메이션을 한 번 실행하도록 설정
+    ligthyImage.style.animation = "fadeInOut 2.9s infinite";  // 2초 동안 반복하며 애니메이션 시작
+});
+        // play.png 클릭 시 음악 재생/정지
+        document.getElementById("play").addEventListener("click", function() {
+            const audio = document.getElementById("aptAudio");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+    const video = document.getElementById("apt");
+    video.play();
+});
+const video = document.getElementById("apt");
+video.play();
+        title.addEventListener('click', () => {
+    brunoy.style.display = 'block';
+    handy.style.display = 'block';
+    aparty.style.display = 'block';
+    basey.style.display = 'block';
+    liney.style.display = 'block';
+    document.getElementById('man1').style.display = 'block';
+    document.getElementById('man2').style.display = 'block';
+    document.getElementById('man3').style.display = 'block';
+    liney.classList.add('blink');
+    setTimeout(() => liney.classList.remove('blink'), 1500);
+    colorBackground.style.display = 'block';
+    
+});
+
+        // click 버튼 클릭 시 폭죽 및 컨페티 효과
+        document.getElementById("click").addEventListener("click", function() {
+            const fireworkCount = 25; // 폭죽 개수
+            const confettiCount = 50; // 컨페티 개수
+
+            // 폭죽 효과 생성
+            for (let i = 0; i < fireworkCount; i++) {
+        const firework = document.createElement("div");
+        firework.classList.add("firework");
+        
+        // 폭죽이 더 넓은 영역에 퍼지도록 설정
+        firework.style.top = `${Math.random() * (window.innerHeight + 1000)}px`; // 화면 아래쪽으로 더 확장
+        firework.style.left = `${Math.random() * window.innerWidth}px`;
+        
+        document.body.appendChild(firework);
+        setTimeout(() => firework.remove(), 1000);
+    }
+
+         // 컨페티 효과 생성
+    for (let i = 0; i < confettiCount; i++) {
+        const confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        
+        // 컨페티가 더 넓은 영역에 퍼지도록 설정
+        confetti.style.top = `${Math.random() * (window.innerHeight + 1000) - 450}px`; 
+        confetti.style.left = `${Math.random() * (window.innerWidth + 1000) - 450}px`;
+        
+        confetti.style.backgroundColor = getRandomColor();
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 4500); // 컨페티 효과가 사라지는 시간 설정
+    }});
+
+        // 랜덤 색상 생성 함수
+        function getRandomColor() {
+            const colors = ["#ff0", "#ff6347", "#ff1493", "#1e90ff", "#32cd32"];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        document.getElementById("man1").addEventListener("click", function() {
+    const man = this;
+    man.classList.add("shake");
+    man.style.animation = "scaleEffect 0.2s ease-in-out infinite"; // 빠른 리듬 효과
+
+    setTimeout(() => {
+        man.classList.remove("shake");
+        man.style.animation = ""; // 효과 초기화
+    }, 1000); // 1초 후 효과 제거
+});
+
+document.getElementById("man2").addEventListener("click", function() {
+    const man = this;
+    man.classList.add("shake");
+    man.style.animation = "scaleEffect 0.2s ease-in-out infinite"; // 빠른 리듬 효과
+
+    setTimeout(() => {
+        man.classList.remove("shake");
+        man.style.animation = ""; // 효과 초기화
+    }, 1000); // 1초 후 효과 제거
+});
+
+document.getElementById("man3").addEventListener("click", function() {
+    const man = this;
+    man.classList.add("shake");
+    man.style.animation = "scaleEffect 0.2s ease-in-out infinite"; // 빠른 리듬 효과
+
+    setTimeout(() => {
+        man.classList.remove("shake");
+        man.style.animation = ""; // 효과 초기화
+    }, 1000); // 1초 후 효과 제거
+});
+  
+    </script>
+</body>
+</html>
